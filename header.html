@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 2000px;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        /* header 기본 구조 */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #f9f8f4;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 상단 */
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-menu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .top-menu a {
+            color: #555;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        /* 하단 GNB */
+        .gnb {
+            /* border-top: 1px solid #ddd; */
+        }
+
+        .gnb ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 40px;
+            padding: 16px 0;
+        }
+
+        .gnb a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #222;
+            transition: color 0.2s;
+        }
+
+        .gnb a:hover {
+            color: #006241;
+            /* 스타벅스 그린 */
+        }
+
+        /* LNB 영역 */
+        .lnb-wrap {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            display: none;
+            justify-content: center;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lnb-wrap.active {
+            display: flex;
+        }
+
+        .lnb {
+            display: none;
+            max-width: 1200px;
+            width: 80%;
+            padding: 30px 0;
+        }
+
+        .lnb.active {
+            display: block;
+        }
+
+        .lnb ul {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .lnb a {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .lnb a:hover {
+            color: #006241;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <!-- 왼쪽 로고 -->
+            <div class="logo">
+                <a href="#"><img src="./imgs/logo.png" alt="logo" /></a>
+            </div>
+
+
+            <div class="menu-wrap">
+
+                <!-- 오른쪽 상단 메뉴 -->
+                <div class="top-menu">
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">My Starbucks</a></li>
+                        <li><a href="#">Customer Service & Ideas</a></li>
+                        <li><a href="#">Find a Store</a></li>
+                        <li><a href="#"><i class="search">🔍</i></a></li>
+                    </ul>
+                </div>
+
+
+                <!-- 하단 GNB -->
+                <nav class="gnb">
+                    <ul>
+                        <li data-menu="coffee"><a href="#">COFFEE</a></li>
+                        <li data-menu="menu"><a href="#">MENU</a></li>
+                        <li data-menu="store"><a href="#">STORE</a></li>
+                        <li data-menu="esg"><a href="#">ESG</a></li>
+                        <li data-menu="rewards"><a href="#">STARBUCKS REWARDS</a></li>
+                        <li data-menu="sales"><a href="#">CORPORATE SALES</a></li>
+                        <li data-menu="whatsnew"><a href="#">WHAT'S NEW</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <!-- LNB (하단 펼침 영역) -->
+        <div class="lnb-wrap">
+            <div class="lnb" data-menu="coffee">
+                <ul>
+                    <li><a href="#">스타벅스 원두</a></li>
+                    <li><a href="#">비아 & 오리가미</a></li>
+                    <li><a href="#">커피 이야기</a></li>
+                </ul>
+            </div>
+
+            <div class="lnb" data-menu="menu">
+                <ul>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">푸드</a></li>
+                    <li><a href="#">상품</a></li>
+                </ul>
+            </div>
+
+            <div class="lnb" data-menu="sales">
+                <ul>
+                    <li><a href="#">기업 구매 안내</a></li>
+                    <li><a href="#">단체 기프트카드</a></li>
+                </ul>
+            </div>
+
+            <div class="lnb" data-menu="whatsnew">
+                <ul>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">뉴스</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        const gnbItems = document.querySelectorAll('.gnb > ul > li');
+        const lnbWrap = document.querySelector('.lnb-wrap');
+        const lnbs = document.querySelectorAll('.lnb');
+
+        gnbItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const target = item.dataset.menu;
+
+                lnbs.forEach(lnb => {
+                    lnb.classList.remove('active');
+                    if (lnb.dataset.menu === target) {
+                        lnb.classList.add('active');
+                    }
+                });
+
+                lnbWrap.classList.add('active');
+            });
+        });
+
+        lnbWrap.addEventListener('mouseleave', () => {
+            lnbWrap.classList.remove('active');
+        });
+
+    </script>
+</body>
+
+</html>
