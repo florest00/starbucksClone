@@ -1,0 +1,81 @@
+footer {
+    background-color: #2C2A29;
+}
+
+footer .inner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+footer .inner .footer-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 60px 0;
+}
+
+footer .inner .footer-list .category ul{
+    margin-top: 8px;
+}
+
+footer .inner .footer-list .category ul li a {
+    color: #fff;
+    font-size: 12px;
+}
+
+#category-tit {
+    font-size: 14px;
+    color: #fff;
+}
+
+#accent {
+    color: #00b050;
+    font-weight: bold;
+}
+
+footer .inner .reward-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+footer .inner .bot-wrapper ul li {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+footer .inner .bot-wrapper ul.top {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+footer .inner .bot-wrapper ul.top li {
+    color: #fff;
+}
+
+footer .inner .bot-wrapper ul.center-btn-area {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+footer .inner .bot-wrapper ul.company-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+footer .inner .bot-wrapper ul.company-info li {
+    font-size: 12px;
+    color: #fff;
+}
+
+footer .inner .bot-wrapper span {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+}
