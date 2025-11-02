@@ -7,13 +7,13 @@
     <title>starbucks clone</title>
     <link rel="stylesheet" href="../css/style.css">
     <!-- <script defer src="../js/script.js"></script>// -->
-    <script defer src="js/script.js"></script>
+    <script defer src="../js/script.js"></script>
 </head>
 
 <body>
     <div id="wrap">
 
-        <header>
+        <header class="header-web">
             <div class="header-inner">
                 <div class="l">
                     <h1 class="logo"><img src="../imgs/logo.png" alt="logo"></h1>
@@ -278,8 +278,146 @@
             </div>
         </header>
 
-        <!-- 💡 화면 전체에 고정될 자리 -->
+        <!-- 화면 전체에 고정될 자리 -->
         <div class="lnb-container"></div>
+
+        <script defer src="../js/header-mob.js"></script>
+
+        <header class="header-mob">
+            <div class="header-mob-inner">
+                <div class="header-mob-inner-left">
+                    <h1 class="logo">
+                        <a href="/"><img src="../imgs/logo.png" alt="logo"></a>
+                    </h1>
+                </div>
+                <div class="header-mob-inner-right">
+                    <button class="icon-btn mypage"><img src="../imgs/mob2/icon_user_m.png" alt="마이페이지"></button>
+                    <button class="icon-btn location"><img src="../imgs/mob2/icon_spot_m.png" alt="매장찾기"></button>
+                    <button class="icon-btn menu-btn"><img src="../imgs/mob2/btn_berger_m.png" alt="메뉴열기"></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="drawer-dim"></div>
+
+        <script defer src="../js/drawer-menu.js"></script>
+        <!-- 드로어메뉴 -->
+        <div class="drawer">
+            <aside class="close-btn"><img src="../imgs/mob2/btn_gnb_close.png" alt="close-btn"></aside>
+            <div class="drawer-top">
+                <form class="search-form">
+                    <input type="text">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="drawer-body">
+                <ul class="drawer-menu">
+                    <li>
+                        <button class="menu-toggle en">My Starbucks
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">COFFEE
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">MENU
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">STORE
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">ESG
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">Starbucks Rewards
+
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">Corporate Sales
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-toggle en">What's New
+                            <span class="mt-img">
+                                <img src="../imgs/mob2/mob_gnb_arrow_down_w.png" alt="arrow_down">
+                            </span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="#">스타벅스 원두</a></li>
+                            <li><a href="#">스타벅스 비아</a></li>
+                            <li><a href="#">스타벅스 오리가미</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
 
         <div id="container">
@@ -305,6 +443,32 @@
                                 <div class="img"><img src="../imgs/2025_autumn_top_drink06_251024.png" alt=""></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- mobile hero-inner -->
+                <div class="hero-inner-mob">
+                    <div class="hero-inner-mob-slogan">
+                        <img src="../imgs/mob/2025_winter_top_slogan_mo_251027.png" alt="">
+                    </div>
+                    <div class="hero-inner-mob-imgs">
+                        <div class="img01">
+                            <img src="../imgs/mob/2025_winter_top_drink01_mo_251027.png" alt="">
+                        </div>
+                        <div class="img02">
+                            <img src="../imgs/mob/2025_winter_top_drink02_mo_251027.png" alt="">
+                        </div>
+                        <div class="img03">
+                            <img src="../imgs/mob/2025_winter_top_drink03_mo_251027.png" alt="">
+                        </div>
+                        <div class="img04">
+                            <img src="../imgs/mob/2025_winter_top_drink04_mo_251027.png" alt="">
+                        </div>
+                        <div class="img05">
+                            <img src="../imgs/mob/2025_winter_top_drink05_mo_251027.png" alt="">
+                        </div>
+                    </div>
+                    <div class="hero-sec-btn-area">
+                        <button class="button-mob btn-002 btn-002-red">자세히 보기</button>
                     </div>
                 </div>
             </section>
@@ -344,13 +508,16 @@
                                 <!-- 여러 내용이 나오는 애니메이션 -->
                                 <p class="notice"></p>
                             </div>
-                            <div class="plus-icon"><img src="../imgs/btn_notice_plus.png" alt=""></div>
+                            <div class="plus-icon"><a href="#"><img src="../imgs/btn_notice_plus.png" alt=""></a></div>
                         </div>
                     </div>
                     <div class="r">
                         <div class="inner">
                             <h4>스타벅스 프로모션</h4>
-                            <div class="arrow-bot-icon"><img src="../imgs/btn_prom_down.png" alt=""></div>
+                            <div class="arrow-bot-icon">
+                                <a href="#">
+                                    <img src="../imgs/btn_prom_down.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -433,9 +600,13 @@
                         <img src="../imgs/251021_pc_reserve_coffee.png" alt="">
                         <img src="../imgs/251021_mo_reserve_bg.jpg" alt="">
                     </div>
+                    <div class="reserve-btn-area">
+                        <a class="button btn-004" href="#">자세히 보기</a>
+                        <a class="button-mob btn-004" href="#">자세히 보기</a>
+                    </div>
                 </div>
             </section>
-            <section id="fav">
+            <section class="fav">
                 <div class="fav-inner">
                     <div class="l">
                         <div class="txt-img"><img src="../imgs/2025_january_pick_txt01.png" alt=""></div>
@@ -446,26 +617,62 @@
                         <div class="img"><img src="../imgs/2025_autumn_pick_img_250916.png" alt=""></div>
                     </div>
                 </div>
+                <div class="fav-inner-mob">
+                    <img src="../imgs/mob2/2025_winter_pick_img_mo_251027.png" alt="">
+                    <div class="fav-inner-mob-bottom">
+                        <img src="../imgs/mob2/2025_january_pick_txt01_mo.png" alt="">
+                        <img src="../imgs/mob2/2025_january_pick_txt02_mo.png" alt="">
+                        <div class="fav-btn-area">
+                            <a class="button-mob btn-002" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+
+                </div>
             </section>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    // fav
+
+                    const favInner = document.querySelector(".fav-inner");
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                favInner.classList.add("active");
+                            }
+                        });
+                    });
+
+                    observer.observe(favInner);
+
+                });
+            </script>
+
             <section id="reserve-magazine">
                 <div class="reserve-magazine-inner">
                     <div class="l"><img src="../imgs/reserve_text_pc.png" alt=""></div>
                     <div class=" r"><img src="../imgs/reserve_visual_pc.png" alt=""><button id="btn-003">자세히 보기</button>
                     </div>
                 </div>
-
+                <div class="reserve-magazine-btn-area">
+                    <a class="button btn-003" href="#">자세히 보기</a>
+                </div>
             </section>
             <section id="store">
                 <div class="store-inner">
                     <div class="l">
                         <img src="../imgs/221212_main_story_1.png" alt="">
                         <img src="../imgs/221212_main_story_2.png" alt="">
-                        <img src="../imgs/store_exp_img03.png" alt="">
+                        <!-- <img src="../imgs/store_exp_img03.png" alt=""> -->
                     </div>
                     <div class="r">
                         <img src="../imgs/221212_pc_main_story_txt_1.png" alt="">
                         <img src="../imgs/221212_pc_main_story_txt_2.png" alt="">
-                        <button id="btn-003">매장 찾기</button>
+                        <img class="store-img-m" src="../imgs/221212_m_main_story_txt_2.png" alt="">
+                        <div class="btn-area">
+                            <button id="btn-003">매장 찾기</button>
+                        </div>
                         <img class="store-img" src="../imgs/store_exp_img04.png" alt="">
                     </div>
                 </div>
@@ -567,14 +774,14 @@
         </footer>
 
         <!-- 자동으로 뜨는 모달 -->
-        <div class="modal" id="alertModal">
+        <!-- <div class="modal" id="alertModal">
             <div class="modal-content">
                 <span class="modal-close" id="closeModal">&times;</span>
                 <p>미완성입니다.</p>
             </div>
-        </div>
+        </div> -->
 
-        <script>
+        <!-- <script>
             const modal = document.getElementById('alertModal');
             const closeBtn = document.getElementById('closeModal');
 
@@ -587,7 +794,7 @@
                     modal.style.display = 'none';
                 }
             });
-        </script>
+        </script> -->
 
 
     </div>
@@ -622,3 +829,4 @@
 
     setInterval(changeNotice, 5000);
 </script>
+<script defer src="../js/intersection-observer.js"></script>

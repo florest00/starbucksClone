@@ -233,6 +233,15 @@
     height: 50px;
 } */
 
+.arrow-bot-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.arrow-bot-icon > a > img {
+    width: 100%;
+}
+
 #reward {
     background: #1e3932;
     padding: 60px 0;
@@ -408,13 +417,14 @@
     display: none;
 }
 
-#fav {
+.fav {
     background: url(../imgs/2025_autumn_pick_bg_250916.jpg) center center fixed no-repeat #45434c;
     background-size: auto 87%;
     padding: 0;
     position: relative;
     background-position: bottom;
     padding: 60px 0;
+    overflow: hidden;
 }
 
 .fav-inner {
@@ -422,6 +432,30 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.fav-inner .l {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.fav-inner .r {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.fav-inner.active .l {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fav-inner.active .r {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* .fav-inner .r img {
@@ -490,6 +524,7 @@
 #store {
     background-image: url(../imgs/store_bg.jpg);
     padding-bottom: 93px;
+    overflow: hidden;
 }
 
 .store-inner {
@@ -501,6 +536,24 @@
     position: relative;
     width: 40%;
 }
+
+
+.store-inner .l::before {
+    content: '';
+    position: absolute;
+    /* top: -1px; */
+    top: -48px;
+    right: -27px;
+    width: 350px;
+    min-height: 300px;
+    height: 100%;
+    background-image: url(../imgs/store_exp_img03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: center -35px; */
+    pointer-events: none;
+}
+
 .store-inner .l img:first-child {
     position: absolute;
     top: 0;
@@ -511,11 +564,11 @@
     top: 145px;
     left: 236px;
 }
-.store-inner .l img:last-child {
+/* .store-inner .l img:last-child {
     position: absolute;
     top: -51px;
     left: 388px;
-}
+} */
 
 .store-inner .r {
     display: block;
@@ -536,7 +589,15 @@
     margin-bottom: 24px;
 }
 
+.store-inner .r img:nth-child(3) {
+    display: none;
+}
+
 .mob-br {
+    display: none;
+}
+
+.store-img-m {
     display: none;
 }
 
@@ -546,7 +607,160 @@
     letter-spacing: 0;
 }
 
+.hero-inner-mob {
+    display: none;
+}
+
+.fav-inner-mob {
+    display: none;
+}
+
+.reserve-magazine-btn-area {
+    display: none;
+}
+
+.reserve-btn-area > a:first-child {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    bottom: 89px;
+    left: 34%;
+    z-index: 10;
+}
+
+.reserve-btn-area > a:last-child {
+    display: none;
+}
+
 @media (max-width: 992px) {
+
+    #hero-section {
+    width: auto;
+    height: 367.97vw;
+    background-image: url(../imgs/mob/2025_winter_top_bg_mo_251027.jpg);
+    background-position: center top;
+    box-sizing: border-box;
+    margin-top: 9px;
+}
+
+
+    .hero-inner {
+        display: none;
+    }
+    .hero-inner-mob {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .hero-inner-mob .hero-inner-mob-slogan {
+        width: 67.032%;
+        position: absolute;
+        top: 9.852%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-inner-mob > .hero-inner-mob-slogan > img {
+        width: 100%;
+        display: block;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img01 {
+        position: absolute;
+        z-index: 8;
+        top: 16.688%;
+        left: 9.376%;
+        max-width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img01 > img {
+        width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img02 {
+        position: absolute;
+        z-index: 9;
+        top: 29.6396%;
+        left: 12.5%;
+        width: 78.282%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img02 > img {
+        width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img03 {
+        position: absolute;
+        z-index: 10;
+        top: 47.9836%;
+        left: 9.376%;
+        width: 95.938%;
+        max-width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img03 > img {
+        width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img04 {
+        position: absolute;
+        z-index: 10;
+        top: 61.869%;
+        left: 12.5%;
+        width: 79.22%;
+        max-width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img04 > img {
+        width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img05 {
+        position: absolute;
+        z-index: 10;
+        top: 75.9666%;
+        left: 9.376%;
+        width: 99.846%;
+        max-width: 100%;
+    }
+
+    .hero-inner-mob .hero-inner-mob-imgs .img05 > img {
+        width: 100%;
+    }
+
+    .hero-sec-btn-area {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-sec-btn-area > button {
+        white-space: nowrap;
+    }
+
+    .reserve-btn-area {
+        position: absolute;
+        width: fit-content;
+        bottom: -116px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    .reserve-btn-area > a:first-child {
+        display: none;
+    }
+
+    .reserve-btn-area > a:last-child {
+        display: block;
+    }
     
     #promo {
         padding: 60px 0;
@@ -602,8 +816,9 @@
     position: relative;
     height: 100vh;
     background: url(../imgs/251021_pc_reserve_bg.jpg) no-repeat center top;
-    background-size: 100% 400px;
+    background-size: auto 335px;
     overflow: hidden;
+    padding-bottom: 150px;
 }
 
 .reserve-inner .r {
@@ -633,6 +848,7 @@
         background-image: url(../imgs/reserve_visual_m.jpg);
         position: relative;
     /* height: 400px; */
+    padding-bottom: 261px;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -642,8 +858,30 @@
         display: none;
     }
 
+    .reserve-magazine-btn-area {
+        display: block;
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    .reserve-magazine-btn-area > a {
+        display: block;
+    }
+
     .notice-inner {
         display: block;
+    }
+
+    .plus-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .plus-icon > a > img {
+        width: 100%;
     }
 
     .notice-inner .l, .notice-inner .r {
@@ -708,4 +946,173 @@
     .mob-br {
         display: block;
     }
+
+    #store {
+    background-size: 100% auto;
+    height: 750px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+    }
+    
+    .store-img {
+        bottom: -290px;
+        right: -119px;
+    }
+
+    .store-img-m {
+    display: block;
+    }
+
+.store-inner .r {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 384px;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: center;
+    
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+.store-inner .r img:first-child {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    /* 초기 상태 */
+    opacity: 0;
+    transform: translateY(-20px);
+
+    animation: fadeDown 1s ease forwards;
+    /* 1초 동안 실행, 끝나면 유지 */
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.store-inner .r img:nth-child(2) {
+    display: none;
+}
+
+.store-inner .r img:nth-child(3) {
+    display: block;
+    width: 454px;
+    margin-bottom: 24px;
+
+    /* 초기 상태 */
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.store-inner .l::before {
+    top: 289px;
+    left: -9px;
+    width: 300px;
+}
+
+.fav {
+    position: relative;
+    background: url(../imgs/mob2/2025_winter_pick_bg_mo_251027.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-bottom: 440px;
+}
+
+.fav-inner {
+    display: none;
+}
+
+.fav-inner-mob {
+    display: block;
+    position: absolute;
+    top: 102px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fav-inner-mob .fav-btn-area {
+    position: absolute;
+    bottom: -214px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fav-inner-mob .fav-btn-area > a {
+    display: block;
+}
+
+.fav-inner-mob > img:first-child {
+    width: 100vw;
+}
+
+.fav-inner-mob .fav-inner-mob-bottom {
+    position: absolute;
+    bottom: -379px;
+    left: 50%;
+    transform: translateX(-50%);
+
+        opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+}
+
+.fav-inner-mob .fav-inner-mob-bottom > img:first-child {
+    width: 65vw;
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+}
+
+.fav-inner-mob .fav-inner-mob-bottom > img:nth-child(2) {
+    width: 76vw;
+    position: absolute;
+    bottom: -126px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 }
