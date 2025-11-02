@@ -1,8 +1,15 @@
-button {
+button, .button {
     border-radius: 6px;
     font-size: 16px;
     padding: 8px 24px;
     white-space: nowrap;
+}
+
+.button-mob {
+    border-radius: 2px;
+    font-size: 24px;
+    white-space: nowrap;
+    padding: 12px 32px;
 }
 
 #btn-outlined-001 {
@@ -17,23 +24,50 @@ button {
     color: #fff;
 }
 
-#btn-002 {
+#btn-002, .btn-002 {
     border: 2px solid #fff;
     color: #fff;
     background: none;
 }
 
-#btn-003 {
+.btn-002-red:hover {
+    color: red !important;
+}
+
+#btn-002:hover, .btn-002:hover {
+    border: 2px solid #fff;
+    color: #242422;
+    background: #fff;
+}
+
+#btn-003, .btn-003 {
     border: 2px solid #000;
     color: #000;
     background: none;
 }
 
-#btn-003:hover {
+#btn-003:hover, .btn-003:hover {
     border: 2px solid #000;
     color: #fff;
     background: #000;
 }
+
+/* 251101 */
+.btn-004 {
+    border: 2px solid #d0923e;
+    color: #d0923e;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.btn-004:hover {
+    border: 2px solid #d0923e;
+    color: #fff;
+    background: #d0923e;
+    border-radius: 3px;
+}
+
+
 
 @media (max-width: 992px) {
     button {
